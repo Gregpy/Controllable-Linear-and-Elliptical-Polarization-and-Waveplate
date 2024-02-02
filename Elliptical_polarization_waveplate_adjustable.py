@@ -264,7 +264,10 @@ class MainWindow(QtWidgets.QMainWindow):
                     self.plot2.setLabel('bottom', 'E 90°', **self.styles)
    
                 self.data_line2.setData(xeeo, yeeo, pen = self.pen)
-
+                
+        # print((yeeo[:-1]**2-xeeo[:-1]**2).mean())  # see difference in intensities verical - horizontal, after waveplate
+        # Maybe this will be incorporated into the GUI and plots at some point
+    
     def closeEvent(self, event): # when window is closed
         super(MainWindow, self).closeEvent(event)
         app.quit()
